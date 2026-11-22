@@ -8,24 +8,20 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 
-<body class="bg-gray-100 min-h-screen p-8">
+<body class="bg-gray-100 flex p-10 justify-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md">
+        <h1 id="userName" class="text-xl font-bold mb-4"></h1>
 
-    <h1 id="welcomeMessage" class="text-3xl font-bold mb-6">
-        Welcome
-    </h1>
 
-    <table class="w-full bg-white border">
-        <thead class="bg-gray-200">
-            <tr>
-                <th class="p-3 border">Username</th>
-                <th class="p-3 border">Email</th>
-                <th class="p-3 border">Date of Birth</th>
-                <th class="p-3 border">Role</th>
-            </tr>
-        </thead>
-        <tbody id="usersTable">
-        </tbody>
-    </table>
+        <table id="usersData" class="min-w-full bg-white shadow-md rounded-lg">
+            <thead class="bg-gray-200">
+                <tr></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+
     <script src="userManagement.js"></script>
 </body>
 

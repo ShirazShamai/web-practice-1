@@ -19,8 +19,7 @@ registerForm.addEventListener('submit', async (event) => {
     }
 
     try {
-        let users = JSON.parse(localStorage.getItem('users')) || [];
-        if (users.some(user => user.username === username || user.email === email)) {
+        if(find(username)) {
             registerMessage.textContent = "Username or email already exists.";
             registerMessage.classList.remove("text-green-500");
             registerMessage.classList.add("text-red-500");
@@ -28,9 +27,7 @@ registerForm.addEventListener('submit', async (event) => {
         }
 
         const role = users.length === 0 ? "admin" : "user";
-        users.push({ username, email, password, dob, role });
-
-        localStorage.setItem('users', JSON.stringify(users));
+        add(username, email, password, dob, isAdmin);
 
         registerMessage.textContent = "Registration successful! (Data stored in local storage)";
         registerMessage.classList.remove("text-red-500");

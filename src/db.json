@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "username": "lala",
+      "email": "lala12@gmail.com",
+      "password": "1234",
+      "dob": "1990-10-13",
+      "isAdmin": true
+    },
+    {
+      "username": "baba",
+      "email": "baba@gmail.com",
+      "password": "1212",
+      "dob": "1994-11-23",
+      "isAdmin": false
+    }
+  ]
+}

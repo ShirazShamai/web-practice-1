@@ -6,8 +6,7 @@ loginForm.addEventListener('submit', function (event) {
     event.preventDefault();
     const usernameOrEmail = document.getElementById('userInput').value;
     const password = document.getElementById('passInput').value;
-    let users = JSON.parse(localStorage.getItem('users')) || [];
-    let user = users.find(u => u.username === usernameOrEmail || u.email === usernameOrEmail);
+    let user = find(usernameOrEmail);
     let nameOrEmail = 'test';
     let pass = 'password';
 
@@ -21,7 +20,7 @@ loginForm.addEventListener('submit', function (event) {
         loginMessage.classList.remove('text-red-500');
         loginMessage.classList.add('text-green-500');
         localStorage.setItem('loggedInUser', JSON.stringify(user));
-        if (user.role === "admin") {
+        if (user.isAdmin === true) {
             window.location.href = "userManagement.html";
         }
     } else {
